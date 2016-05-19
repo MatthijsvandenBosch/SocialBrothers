@@ -84,6 +84,7 @@ You can learn more about each of these components within the [Quick Start Guide]
 Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
 
 Cool library's: http://socket.io / https://www.npmjs.com/
+Function of electron: http://electron.atom.io/docs/api/web-contents/
 
 
 

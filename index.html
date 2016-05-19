@@ -15,7 +15,7 @@
   	<script type="text/javascript" src="./assets/bootstrap.js"></script>
 </head>
 <body>
-  
+
 	<h1>Social Brothers</h1>
 	<h2>Portal</h2>
 	<a id="close" href="javascript:window.close()">Close</a>
@@ -25,6 +25,11 @@
        mainWindow = null;
         app.quit();
   	});
+
+	//Get the content from main.js
+	require('electron').ipcRenderer.on('ping', (event, message) => {
+		console.log(message);  // Prints "whoooooooh!"
+	});
 </script>
 
 	<div class="row panels">
