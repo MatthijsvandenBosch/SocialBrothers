@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="-webkit-app-region: drag">
+<head>
+	<title>Social Brothers Portal</title>
+	
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="./assets/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="./style.css">
+  	
+  	<!-- JS files -->
+  	<script>window.$ = window.jQuery = require(__dirname+'/assets/jquery.js');</script>
+  	<script type="text/javascript" src="./assets/bootstrap.js"></script>
+</head>
+<body>
+  
+	<h1>Social Brothers</h1>
+	<h2>Portal</h2>
+	<a id="close" href="javascript:window.close()">Close</a>
+
+<script>
+	document.getElementById("close").addEventListener("click", function () {
+       mainWindow = null;
+        app.quit();
+  	});
+</script>
+
+	<div class="row panels">
+		<a href="https://huds.socialbrothers.nl/"><div class="col-md-3">
+			<img src="./images/chronometer.png" />
+			<h4>Urensysteem</h4>
+		</div></a>
+		<a href="https://wachtwoorden.sbapps.nl/"><div class="col-md-3">
+			<img src="./images/pin-code.png" />
+			<h4>Wachtwoorden</h4>
+		</div></a>
+			<a href="https://wiki.sbapps.nl/"><div class="col-md-3">
+			<img src="./images/head.png" />
+			<h4>Wiki</h4>
+		</div></a>
+		<a href="https://socialbrothers.slack.com/messages/general/"><div class="col-md-3">
+			<img src="./images/chat.png" />
+			<h4>Chat</h4>
+		</div></a>
+	</div>         
+
+</body>
+
+<script>
+    // You can also require other files to run in this process
+    require('./renderer.js');
+</script>
+</html>
