@@ -25,6 +25,12 @@ cd /Users/matthijs/Documents/GitHub/socialbrothers
 npm install
 
 
+**Unpacking node modules**
+
+Go to your node_modules folder (cd node_modules)
+npm install
+
+
 **Start your program**
 
 npm start
