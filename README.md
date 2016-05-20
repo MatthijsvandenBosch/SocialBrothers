@@ -83,6 +83,15 @@ Following soon
 ```bash
 <script>window.$ = window.jQuery = require(__dirname+'/assets/jquery.js');</script>
 ```
+Or in your main.js instead of your header like this
+```bash
+app.on('ready', () => {
+  mainWindow.webContents.on('did-start-loading', function() {
+    mainWindow.webContents.executeJavaScript("var $ = jQuery = require(__dirname+'/assets/jquery.js'), mainWindow = require('remote').getCurrentWindow();");
+    mainWindow.webContents.executeJavaScript("var $ = jQuery = require(__dirname+'/assets/bootstrap.js'), mainWindow = require('remote').getCurrentWindow();");
+  });
+});
+```
 
 **Documentations & Library's**
 

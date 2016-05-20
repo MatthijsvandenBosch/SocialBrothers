@@ -36,6 +36,11 @@ app.on('ready', () => {
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('ping', 'whoooooooh!');
   });
+
+  mainWindow.webContents.on('did-start-loading', function() {
+    mainWindow.webContents.executeJavaScript("var $ = jQuery = require(__dirname+'/assets/jquery.js'), mainWindow = require('remote').getCurrentWindow();");
+    mainWindow.webContents.executeJavaScript("var $ = jQuery = require(__dirname+'/assets/bootstrap.js'), mainWindow = require('remote').getCurrentWindow();");
+  });
 });
 
 
