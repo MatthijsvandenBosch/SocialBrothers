@@ -79,6 +79,11 @@ Following soon
 - `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
 - `index.html` - A web page to render. This is the app's **renderer process**.
 
+**jQuery in Electron**
+```bash
+<script>window.$ = window.jQuery = require(__dirname+'/assets/jquery.js');</script>
+```
+
 You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
 
 Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
